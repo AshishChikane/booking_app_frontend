@@ -9,9 +9,14 @@ const [name, setName] = useState("");
 const [email,setEmail] = useState('');
 const [password,setPassword] = useState('');
 
-function registerUser(ev){
-    ev.preventDefault();
-    axios.post('/register',{name,email,password});
+async function registerUser(ev){
+    try{
+        ev.preventDefault();
+        await axios.post('/user/register',{name,email,password});
+        alert('Registration Successfull, Now you can log in');
+    }catch(err){
+        alert("Registration failed.PLease try again later");
+    }
 }
 
     return (

@@ -5,7 +5,7 @@
 input[type="text"],input[type="password"],input[type="email"]{
     @apply w-full my-2 py-2 px-2 rounded-2xl border;
 }
-
+    
 button{
     @appply bg-gray-300;
 }
